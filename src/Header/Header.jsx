@@ -5,13 +5,7 @@ const Header = () => {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          <img
-            src="/logo.png" // put your actual path here
-            alt="Rajgram Ramakrishna Ashrama Vidyamandir"
-            width="100" // adjust size as needed
-            height="30"
-            className="d-inline-block align-text-top"
-          />
+          <img src="/logo.png" alt="Rajgram Ramakrishna Ashrama Vidyamandir" width="100" height="50" className="d-inline-block align-text-top" />
         </a>
 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
