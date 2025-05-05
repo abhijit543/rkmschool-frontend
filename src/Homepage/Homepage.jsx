@@ -1,10 +1,12 @@
 import React from "react";
-import Header from "../Header/Header";
+
+import Parentcard from "./Parentcard";
+import IdiolTalk from "./IdiolTalk";
+import Footer from "../Footer/Footer";
 const Homepage = () => {
   return (
     <div>
-      <Header />
-      <div id="carouselExample" className="carousel slide">
+      <div id="carouselExample" className="carousel slide mb-3">
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src="/Homepage-Banner/image-1.jpg" className="d-block w-100" alt="..." />
@@ -25,6 +27,11 @@ const Homepage = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+      <Parentcard />
+      <div className="mt-3 ">
+        <IdiolTalk />
+      </div>
+      <Footer />
     </div>
   );
 };
