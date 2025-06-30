@@ -20,7 +20,8 @@
   
   /* Reverse class for alternating layout */
   .zigzag-item.reverse {
-    flex-direction: row-reverse; /* Flips the image and content layout */
+    flex-direction: row-reverse; 
+    margin: 14px;
   }
   
   /* Zoom-out animation */
@@ -104,4 +105,35 @@
   color: #fff !important;
   font-weight: 700 !important;
   text-decoration: none !important;
+}
+.zigzag-content h2{
+font-weight: bold;
+    font-size: 2rem;
+    color: #e7d3d3;
+}
+.zigzag-content p{
+    color: #f3c135;
+}
+
+@media (max-width: 768px) {
+  .zigzag-item,
+  .zigzag-item.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+  /* .zigzag-gif{
+    flex-direction: column-reverse;
+  } */
+}
+
+/* .zigzag-content-with-gif {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+} */
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  
+    background-color: rgb(168, 38, 185);
 }

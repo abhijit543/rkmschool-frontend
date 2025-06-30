@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="my-4">
             <div className="d-flex align-items-start mb-3">
               <i className="fas fa-home fa-2x me-3"></i>
-              <p className="mb-0">Ramakrishna Mission, Ramakrishna Ashram Marg, New Delhi - 110055</p>
+              <p className="mb-0">Ramkrishna Ashram Vidyamandir , Rajgram,West Bengal - 731222</p>
             </div>
 
             <div className="d-flex align-items-start mb-3">
@@ -19,9 +19,8 @@ const Footer = () => {
                 <p className="mb-0">
                   <strong>Visiting Hours:</strong>
                 </p>
-                <p className="mb-0">05.00 am to 12.00 noon</p>
-                <p className="mb-0">04:00 pm to 9.00 pm (Apr - Sep)</p>
-                <p className="mb-0">3:30 pm to 8:30 pm (Oct - Mar)</p>
+                <p className="mb-0">09.00 am to 12.00 noon</p>
+                <p className="mb-0">04:00 pm to 5 pm</p>
               </div>
             </div>
 
@@ -39,9 +38,7 @@ const Footer = () => {
             <div className="d-flex align-items-start mb-3">
               <i className="fas fa-envelope fa-2x me-3"></i>
               <p className="mb-0">
-                <a href="mailto:delhi@rkmm.org" className="text-white text-decoration-none">
-                  delhi@rkmm.org
-                </a>
+                <a href="mailto:" className="text-white text-decoration-none"></a>
               </p>
             </div>
 
@@ -49,7 +46,7 @@ const Footer = () => {
               <i className="fas fa-phone fa-2x me-3"></i>
               <p className="mb-0">
                 <a href="tel:+9101145626785" className="text-white text-decoration-none">
-                  +91 - 011 45626785
+                  +91 - 6294 940 974
                 </a>
               </p>
             </div>

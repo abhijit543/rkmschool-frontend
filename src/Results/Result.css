@@ -1,0 +1,22 @@
+.schl-name {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 22px;
+    font-style: italic;
+    text-decoration-line: underline;
+    text-decoration-color: rgb(164, 228, 15);
+    text-decoration-thickness: 2px;
+    animation: mymove 3s ease 0s infinite;
+}
+
+@keyframes mymove {
+    0%, 100% {
+        text-decoration-color: rgb(164, 228, 15);
+        text-decoration-thickness: 2px;
+    }
+    50% {
+        text-decoration-color: rgba(223, 75, 25, 0.81);
+        text-decoration-thickness: 4px;
+    }
+}

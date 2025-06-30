@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Button, Modal, Table } from "react-bootstrap";
 import axios from "axios";
 
 export default function HomeChildCard({ show, onHide, heading, content }) {
   const [teacherData, setTeacherData] = useState([]);
   const [holidayData, setHolidayData] = useState([]);
-  console.log(holidayData);
 
   useEffect(() => {
     if (show && heading === "Rajgram Teachers") {
       axios
-        .get("http://localhost:5000/api/v1/teacher/")
+        .get("https://rajgram-school-react.vercel.app/api/v1/teacher/")
         .then((response) => {
           setTeacherData(response.data.message);
         })
@@ -22,7 +21,7 @@ export default function HomeChildCard({ show, onHide, heading, content }) {
     }
     if (show && heading === "Holidays") {
       axios
-        .get("http://localhost:5000/api/v1/holiday/")
+        .get("https://rajgram-school-react.vercel.app/api/v1/holiday")
         .then((response) => {
           setHolidayData(response.data.message);
         })

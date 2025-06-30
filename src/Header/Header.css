@@ -1,0 +1,33 @@
+.header-top{
+    position: sticky !important;
+    top: 0px;
+    overflow: visible;
+    z-index: 11111111;
+    font-size: 13px;
+  }
+  .modal.show .modal-dialog {
+    margin-top: 8%;
+  }
+.navbar-nav{
+      padding: 13px;
+    font-size: medium;
+}
+
+.navbar-nav .nav-item:hover a{
+text-decoration: underline;
+color: #007bff;
+font-weight: bold;
+}
+.social-links{
+ margin: 20px;
+}
+.social-links a {
+  color: #000;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+ 
+}
+
+.social-links a:hover {
+  color: #007bff; 
+}

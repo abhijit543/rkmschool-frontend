@@ -1,6 +1,9 @@
 .bg-contact {
     background-image: url("/contatct-us/contact-background.jpg");
 }
+.bg-donate {
+    background-image: url("/donate/donate-bg.jpg");
+}
 
 .contact-us {
     max-width: 600px;
@@ -31,7 +34,7 @@ label {
     color: #916f0b;
 }
 
-input[type=email], input[type=tel], input[type=text], select {
+input[type=email], input[type=tel],input[type=number], input[type=text], select {
     width: 100%;
     padding: .5rem;
     border: 1px solid #10cf9a;

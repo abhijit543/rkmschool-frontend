@@ -48,7 +48,7 @@ const Contact = () => {
     if (!validateForm()) return;
 
     try {
-      const res = await fetch("http://localhost:5000/api/v1/contact", {
+      const res = await fetch("https://rajgram-school-react.vercel.app/api/v1/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
