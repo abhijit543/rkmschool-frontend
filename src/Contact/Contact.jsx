@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./contact.css";
+import "./Contact.css";
 import Swal from "sweetalert2";
 
 const Contact = () => {
