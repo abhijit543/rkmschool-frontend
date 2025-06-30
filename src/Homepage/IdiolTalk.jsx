@@ -1,4 +1,4 @@
-import "./IdiolTalk.css";
+import "./idiolTalk.css";
 const IdiolTalk = () => {
   return (
     <div className="zigzag-container">
