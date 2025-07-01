@@ -47,19 +47,6 @@ const Header = () => {
           </ul>
         </div>
       </div>
-      <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
-        <div className="d-flex align-items-center gap-3 social-links">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-youtube"></i>
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram"></i>
-          </a>
-        </div>
-      </div>
     </nav>
   );
 };
