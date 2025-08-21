@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 import "./Header.css";
+
 const Header = () => {
+  const navRef = useRef();
+
+  const handleLinkClick = () => {
+    const bsCollapse = new window.bootstrap.Collapse(navRef.current, { toggle: false });
+    bsCollapse.hide();
+  };
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary header-top p-0">
       <div className="container-fluid">
@@ -12,35 +21,35 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="collapse navbar-collapse" id="navbarNav" ref={navRef}>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link active" to="/" aria-current="page">
+              <Link className="nav-link active" to="/" onClick={handleLinkClick}>
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/contact">
+              <Link className="nav-link active" to="/contact" onClick={handleLinkClick}>
                 Contact
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/donate">
+              <Link className="nav-link active" to="/donate" onClick={handleLinkClick}>
                 Donation
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/about">
+              <Link className="nav-link active" to="/about" onClick={handleLinkClick}>
                 About US
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/result">
+              <Link className="nav-link active" to="/result" onClick={handleLinkClick}>
                 Results
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/gallery">
+              <Link className="nav-link active" to="/gallery" onClick={handleLinkClick}>
                 Gallery
               </Link>
             </li>

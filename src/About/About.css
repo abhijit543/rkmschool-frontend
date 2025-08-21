@@ -1,87 +1,172 @@
-.full-bg-about {
-    background-color: #e7b913e6;
-}
-.about-main-head {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+/* About Section */
+.about-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg,#f9c846,#e78e1f);
+  color: #fff;
 }
 
-h1 {
-    text-shadow: 0 0 3px red, 0 0 5px #00f;
+.about-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
 }
-.dmn-maharaj {
-    padding-bottom: 20px;
+.about-image {
+  flex: 1; /* Takes up 50% of space */
+  display: flex;
+  justify-content: center;
 }
 
-#carouselExampleControls {
-    margin-top: 20px;
+
+.about-image img {
+  width: 100%;      /* Full width of container */
+  max-width: 500px; /* Limits size on large screens */
+  height: auto;     /* Maintains aspect ratio */
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
 }
-.maharaj-text-color {
-    color: #fff;
-    font-size: large;
+.about-image img:hover {
+  transform: scale(1.05);
 }
-.navbar-middle h1, p {
-    margin: 0;
+
+.about-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
-.dmn-maharaj-know-more {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
 }
+
+.about-text button {
+  background: #fff;
+  color: #e78e1f;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about-text button:hover {
+  background: #e78e1f;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Testimonials Section */
 .testimonial-section {
-    background-color: #fff;
+  padding: 80px 0;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.testimonial-section h2 {
+  font-size: 2rem;
+  color: #e78e1f;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.testimonial-slide {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  background: linear-gradient(135deg,#e78e1f,#f9c846);
+  color: #fff;
+  border-radius: 30px;
+  padding: 40px 30px;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.testimonial-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1024px) {
+  .testimonial-slide {
+    flex-wrap: wrap;
+  }
+  .testimonial-card {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1024px) {
+  .about-grid {
+    flex-direction: column;
+    text-align: center;
   }
   
-  .testimonial-box {
-    background-color: #d59c00; /* Yellow */
-    border-radius: 40px;
-    max-width: 900px;
-    color: white;
-    position: relative;
-    padding: 4.5rem !important;
+  .about-image, .about-text {
+    flex: 1 1 100%;
   }
-  
-  .testimonial-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 6px solid white;
-    object-fit: cover;
-    margin-top: -60px;
-    background: #fff;
+
+  .about-image img {
+    max-width: 100%;
+    margin-bottom: 30px;
   }
-  
-  .testimonial-name {
-    font-weight: bold;
-    color: white;
-  }
-  
-  .testimonial-content {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-top: 20px;
-    color: white;
-    position: relative;
-  }
-  
-  .quote-icon {
-    font-size: 2rem;
-    vertical-align: top;
-  }
-  .carousel-control-prev{
-    left: 200px;
-  }
-  .carousel-control-next{
-    right: 200px;
-  }
-  
-  @media(max-width:768px){
-    .carousel-control-next{
-        right: 0;
-    }
-    .carousel-control-prev{
-        left: 0;
-    }
-  }
+}
+
+/* Carousel control arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none; /* Remove default icon */
+  width: 40px;
+  height: 40px;
+  border: solid black 3px; /* Circle border */
+  border-radius: 50%;
+  position: relative;
+}
+
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+  transform: translate(-50%, -50%) rotate(220deg); /* left arrow */
+}
+
+.carousel-control-next-icon::after {
+  transform: translate(-50%, -50%) rotate(50deg); /* right arrow */
+}
+
+/* Optional: increase click area */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 100%;
+}
