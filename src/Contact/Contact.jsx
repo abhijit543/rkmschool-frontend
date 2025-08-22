@@ -105,7 +105,7 @@ const Contact = () => {
               <option value="">Select</option>
               <option value="Admission">Admission</option>
               <option value="Hostel">Hostel</option>
-              <option value="Guest">Guest Night Halt</option>
+              <option value="Guest">Guest Visits</option>
               <option value="other">Other</option>
             </select>
             {errors.message_type && <span className="error">{errors.message_type}</span>}

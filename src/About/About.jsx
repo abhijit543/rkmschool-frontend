@@ -57,7 +57,7 @@ const About = () => {
       <div className="about-section">
         <div className="container about-grid">
           <div className="about-image">
-            <img src="https://res.cloudinary.com/dqlex5zga/image/upload/v1755756231/samples/cloudinary-group.jpg" alt="Ramakrishna Mission" />
+            <img src="https://res.cloudinary.com/dqlex5zga/image/upload/v1755836240/2016_uupoe4.webp" alt="Ramakrishna Mission" />
           </div>
           <div className="about-text">
             <h1>History of Ramakrishna Mission, Rajgram</h1>

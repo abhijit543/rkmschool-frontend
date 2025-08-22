@@ -2,13 +2,14 @@ import { useState } from "react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import ReactPlayer from "react-player";
+import "./Gallery.css";
 
 const ImageGalleryComponent = () => {
   const images = [
-    { original: "/gallery/1.jpg", thumbnail: "/gallery/1.jpg" },
-    { original: "/gallery/2.jpg", thumbnail: "/gallery/2.jpg" },
-    { original: "/gallery/3.jpg", thumbnail: "/gallery/3.jpg" },
-    { original: "/gallery/4.jpg", thumbnail: "/gallery/4.jpg" },
+    { original: "https://res.cloudinary.com/dqlex5zga/image/upload/v1755838470/4_fq41vd.jpg", thumbnail: "https://res.cloudinary.com/dqlex5zga/image/upload/v1755838470/4_fq41vd.jpg" },
+    { original: "https://res.cloudinary.com/dqlex5zga/image/upload/v1755838453/3_v6kf2e.jpg", thumbnail: "https://res.cloudinary.com/dqlex5zga/image/upload/v1755838453/3_v6kf2e.jpg" },
+    { original: "https://res.cloudinary.com/dqlex5zga/image/upload/v1755838346/2_k2af2t.jpg", thumbnail: "https://res.cloudinary.com/dqlex5zga/image/upload/v1755838346/2_k2af2t.jpg" },
+    { original: "https://res.cloudinary.com/dqlex5zga/image/upload/v1755838337/1_x1kbvf.jpg", thumbnail: "https://res.cloudinary.com/dqlex5zga/image/upload/v1755838337/1_x1kbvf.jpg" },
   ];
 
   const videoUrls = [
@@ -17,23 +18,26 @@ const ImageGalleryComponent = () => {
     "https://www.youtube.com/watch?v=7SYuGpY88JI",
     "https://www.youtube.com/watch?v=YGlabG8LFz0",
     "https://www.youtube.com/watch?v=QQ970ZeFDqA",
+    "https://www.youtube.com/watch?v=QQ970ZeFDqA",
   ];
 
   const [selectedVideo, setSelectedVideo] = useState(videoUrls[0]);
+
   const getYouTubeVideoId = (url) => {
     const match = url.match(/(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([^&]+)/);
     return match ? match[1] : "";
   };
+
   return (
     <>
-      <div className="max-w-4xl mx-auto mt-4">
-        <h2 className="text-2xl font-bold text-white text-center mb-4">Image Gallery</h2>
+      <div className="gallery-container">
+        <h2 className="gallery-title">Image Gallery</h2>
         <ImageGallery items={images} showPlayButton={false} showFullscreenButton={true} useBrowserFullscreen={true} showThumbnails={true} slideDuration={400} slideInterval={2000} autoPlay={false} />
       </div>
 
-      <div className="container mt-5">
-        <h2 className="text-2xl font-bold text-white text-center mb-4">RKM Videos</h2>
-        <div className="mb-4">
+      <div className="video-container">
+        <h2 className="gallery-title">RKM Videos</h2>
+        <div className="player-wrapper mb-4">
           <ReactPlayer
             url={selectedVideo}
             width="100%"
@@ -52,15 +56,11 @@ const ImageGalleryComponent = () => {
           />
         </div>
 
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        <div className="video-scroll-container">
           {videoUrls.map((videoUrl, index) => (
-            <div key={index} className="col" onClick={() => setSelectedVideo(videoUrl)} style={{ cursor: "pointer" }}>
-              <div className="card bg-dark text-white">
-                <div className="position-relative" onClick={() => setSelectedVideo(videoUrl)}>
-                  <img src={`https://img.youtube.com/vi/${getYouTubeVideoId(videoUrl)}/0.jpg`} alt="Video thumbnail" style={{ width: "100%", height: "180px", objectFit: "cover" }} />
-                  <button className="btn btn-danger position-absolute top-50 start-50 translate-middle">▶</button>
-                </div>
-              </div>
+            <div key={index} className={`video-card ${selectedVideo === videoUrl ? "active" : ""}`} onClick={() => setSelectedVideo(videoUrl)}>
+              <img src={`https://img.youtube.com/vi/${getYouTubeVideoId(videoUrl)}/0.jpg`} alt="Video thumbnail" className="video-thumbnail" />
+              <div className="play-btn">▶</div>
             </div>
           ))}
         </div>

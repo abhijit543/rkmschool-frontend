@@ -1,3 +1,137 @@
 body {
-    overflow-x: hidden;
-  }
+  overflow-x: hidden;
+  background-color: #0f172a;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.gallery-container,
+.video-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.gallery-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Video Grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.video-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.video-card.active {
+  border-color: #00c6ff;
+  box-shadow: 0 10px 20px rgba(0, 198, 255, 0.4);
+}
+
+.video-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 198, 255, 0.4);
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Circular Play Button Overlay */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.video-card:hover .play-btn {
+  transform: translate(-50%, -50%) scale(1.2);
+  background-color: rgba(255, 0, 0, 1);
+}
+
+/* React Player Wrapper */
+.player-wrapper {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 198, 255, 0.3);
+}
+
+/* Image Gallery Customization */
+.image-gallery-thumbnails-container {
+  border-radius: 10px;
+}
+
+.image-gallery-slide img {
+  border-radius: 10px;
+}
+/* Scrollable Video Container */
+.video-scroll-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.video-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.video-scroll-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 198, 255, 0.5);
+  border-radius: 4px;
+}
+
+.video-scroll-container::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Video Card Styling remains same */
+.video-card {
+  flex: 0 0 auto; /* important for horizontal scroll */
+  width: 220px;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.video-card.active {
+  border-color: #00c6ff;
+  box-shadow: 0 10px 20px rgba(0, 198, 255, 0.4);
+}
+
+.video-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 198, 255, 0.4);
+}

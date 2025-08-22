@@ -1,8 +1,8 @@
 .bg-contact {
-    background-image: url("/contatct-us/contact-background.jpg");
+    background-image: url("https://res.cloudinary.com/dqlex5zga/image/upload/v1755836760/contact-background_dqyzae.jpg");
 }
 .bg-donate {
-    background-image: url("/donate/donate-bg.jpg");
+    background-image: url("https://res.cloudinary.com/dqlex5zga/image/upload/v1755837690/donate-bg_qjw0lo.jpg");
 }
 
 .contact-us {

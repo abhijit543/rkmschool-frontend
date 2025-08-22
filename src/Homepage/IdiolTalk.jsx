@@ -3,7 +3,7 @@ const IdiolTalk = () => {
   return (
     <div className="zigzag-container">
       <div className="zigzag-item">
-        <img src="/idiol/card-1.jpg" alt="Sri Ramakrishna" className="zigzag-image" />
+        <img src="https://res.cloudinary.com/dqlex5zga/image/upload/v1755839650/card-1_of7utx.jpg" alt="Sri Ramakrishna" className="zigzag-image" />
 
         <div className="zigzag-content">
           <h2>As long as I live, so long do I learn.</h2>
@@ -24,7 +24,7 @@ const IdiolTalk = () => {
       </div>
 
       <div className="zigzag-item reverse">
-        <img src="/idiol/card-2.jpg" alt="Maa Sarada" className="zigzag-image" />
+        <img src="https://res.cloudinary.com/dqlex5zga/image/upload/v1755839650/card-2_gymwze.jpg" alt="Maa Sarada" className="zigzag-image" />
         <div className="zigzag-content reverse">
           <h2>ধৈর্য ধরতে হবে পৃথিবীর মতো। পৃথিবীর উপর কত পাপই না ঘটছে! তবু সে চুপ করে সহ্য করে যাচ্ছে।</h2>
           <p>নিজের প্রতি বিশ্বাস রাখো, অপরকে ভালোবাসো, সহানুভূতির সঙ্গে চলো, এবং মনকে শান্ত রাখো।</p>
@@ -34,7 +34,7 @@ const IdiolTalk = () => {
       </div>
 
       <div className="zigzag-item">
-        <img src="/idiol/card-3.jpg" alt="Swami Vivekananda" className="zigzag-image" />
+        <img src="https://res.cloudinary.com/dqlex5zga/image/upload/v1755839652/card-3_oilmml.jpg" alt="Swami Vivekananda" className="zigzag-image" />
         <div className="zigzag-content">
           <h2>Arise! Awake! And stop not until the goal is reached.</h2>
           <p>

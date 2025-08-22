@@ -1,39 +1,68 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
+import Table from "react-bootstrap/Table";
 import "./Result.css";
-const Result = () => {
-  const results = [
-    { year: 2025, image: "/results/2025.jpg" },
-    { year: 2024, image: "/images/2011.jpg" },
-    { year: 2023, image: "/images/2011.jpg" },
-    { year: 2022, image: "/images/2011.jpg" },
-    { year: 2021, image: "/images/2011.jpg" },
-    { year: 2020, image: "/images/2011.jpg" },
-    { year: 2019, image: "/images/2011.jpg" },
-    { year: 2018, image: "/images/2011.jpg" },
-    { year: 2017, image: "/images/2011.jpg" },
-    { year: 2016, image: "/images/2013.jpg" },
-    { year: 2015, image: "/images/2011.jpg" },
-    { year: 2014, image: "/images/2011.jpg" },
-    { year: 2013, image: "/images/2011.jpg" },
-    { year: 2012, image: "/images/2011.jpg" },
-    { year: 2011, image: "/images/2011.jpg" },
-  ];
+import axios from "axios";
 
+const Result = () => {
+  const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      await axios.get(`https://rajgram-school-react.vercel.app/api/v1/result`).then((data) => {
+        setResults(data.data.message);
+      });
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
-    <div>
+    <div className="result-container">
       <h2 className="text-center text-white">Secondary Results</h2>
       <h3 className="text-center text-white schl-name mb-3">Ramakrishna Ashrama Vidyamandir – 731222</h3>
-      <Accordion defaultActiveKey="0">
-        {results.map((result, index) => (
-          <Accordion.Item eventKey={index.toString()} key={result.year}>
-            <Accordion.Header>MADHYAMIK RESULTS {result.year}</Accordion.Header>
-            <Accordion.Body>
-              <img src={result.image} alt={`Result ${result.year}`} style={{ width: "100%" }} />
-            </Accordion.Body>
-          </Accordion.Item>
-        ))}
-      </Accordion>
+
+      {loading ? (
+        <p className="text-center text-white">Loading...</p>
+      ) : (
+        <Accordion defaultActiveKey="0" flush>
+          {results.map((result, index) => (
+            <Accordion.Item eventKey={index.toString()} key={result._id || index}>
+              <Accordion.Header>MADHYAMIK RESULTS {result.year}</Accordion.Header>
+              <Accordion.Body>
+                <Table striped bordered hover responsive className="result-table">
+                  <thead>
+                    <tr>
+                      <th>No. of Students</th>
+                      <th>Appeared</th>
+                      <th>Passed</th>
+                      <th>1st Division</th>
+                      <th>2nd Division</th>
+                      <th>Pass</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{result.datayear.students}</td>
+                      <td>{result.datayear.appeared}</td>
+                      <td>{result.datayear.passed}</td>
+                      <td>{result.datayear.division.first}</td>
+                      <td>{result.datayear.division.second}</td>
+                      <td>{result.datayear.division.pass}</td>
+                    </tr>
+                  </tbody>
+                </Table>
+              </Accordion.Body>
+            </Accordion.Item>
+          ))}
+        </Accordion>
+      )}
     </div>
   );
 };

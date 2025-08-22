@@ -1,139 +1,109 @@
-/* Container for all zigzag items */
+/* Container */
 .zigzag-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem; /* Space between each item */
-    animation: fadeInUp 1s ease-out; /* Fade in effect for the container */
-  }
-  
-  /* Individual zigzag items */
-  .zigzag-item {
-    display: flex;
-    align-items: center;
-    justify-content: stretch;
-    gap: 2rem;
-    margin-left: 13px;
-    opacity: 0; /* Make them invisible initially */
-    transform: scale(0.8); /* Start with a smaller scale */
-    animation: zoomOut 1s forwards; /* Apply zoom-out effect */
-  }
-  
-  /* Reverse class for alternating layout */
-  .zigzag-item.reverse {
-    flex-direction: row-reverse; 
-    margin: 14px;
-  }
-  
-  /* Zoom-out animation */
-  @keyframes zoomOut {
-    0% {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1); /* End state, normal size */
-    }
-  }
-  
-  /* Zoom-out animation for each item */
-  .zigzag-item:nth-child(odd) {
-    animation-delay: 0.2s; /* Delay for odd items */
-  }
-  
-  .zigzag-item:nth-child(even) {
-    animation-delay: 0.4s; /* Delay for even items */
-  }
-  
-  /* Image styling */
-  .zigzag-image {
-    width: 300px;
-    height: auto;
-    object-fit: cover;
-    animation: zoomOut 1s forwards;
-  }
-  
-  /* Content styling */
-  .zigzag-content {
-    max-width: 500px;
-    animation: zoomOut 1s forwards;
-  }
-  
-  /* Title styling */
-  .zigzag-content h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-  
-  /* Paragraph styling */
-  .zigzag-content p {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  
-  /* Fade-in-up effect for container */
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  @media (max-width:768px) {
-    .zigzag-item {
-      flex-direction: column;
-    }
-    .reverse{
-      flex-direction: column;
-    }
-  }
-
- .card-flex{
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
- } 
-
- .footerMainHeading{
-  text-shadow: 0 0 3px red, 0 0 5px #00f;
- }
-.footer-p{
-  color: #fff !important;
-  font-weight: 700 !important;
-  text-decoration: none !important;
-}
-.zigzag-content h2{
-font-weight: bold;
-    font-size: 2rem;
-    color: #e7d3d3;
-}
-.zigzag-content p{
-    color: #f3c135;
+  gap: 3rem;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #1e1e2f, #2a2a3f);
+  border-radius: 12px;
 }
 
+/* Individual zigzag items */
+.zigzag-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  transform: translateY(50px);
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
+}
+
+/* Reverse items */
+.zigzag-item.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Image styling */
+.zigzag-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.zigzag-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Content styling */
+.zigzag-content {
+  max-width: 600px;
+  color: #f3f3f3;
+  animation: fadeInUp 0.8s forwards;
+}
+
+/* Titles */
+.zigzag-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffd700; /* modern gold highlight */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+/* Paragraphs */
+.zigzag-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 0.8rem;
+}
+
+/* Fade-in-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delays for zigzag items */
+.zigzag-item:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+.zigzag-item:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .zigzag-item,
   .zigzag-item.reverse {
     flex-direction: column;
     text-align: center;
+    padding: 1.5rem;
   }
-  /* .zigzag-gif{
-    flex-direction: column-reverse;
-  } */
-}
 
-/* .zigzag-content-with-gif {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 20px;
-} */
+  .zigzag-image {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 1rem;
+  }
 
-.carousel-control-prev-icon, .carousel-control-next-icon{
-  
-    background-color: rgb(168, 38, 185);
+  .zigzag-content {
+    max-width: 100%;
+  }
 }
+   .zigzag-item.reverse {background: #45759f;} 
