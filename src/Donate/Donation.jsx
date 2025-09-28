@@ -93,6 +93,36 @@ const DonationForm = () => {
     <div className="bg-donate">
       <div className="container contact-us">
         <h2 className="contact-title">Donate Now</h2>
+        <div className="donation-purpose">
+  <h3>Why Your Donation Matters</h3>
+  <p>
+    Besides school education, our Ashram runs a tailoring unit to provide
+    job-oriented and self-employment training to poor women of this locality.
+    We also organize medical camps occasionally to relieve the suffering of
+    poor patients.
+  </p>
+  <p>
+    In this way, the Ashram renders its service in different areas of society
+    with its limited resources, relying mostly on donations from our
+    well-wishers, devotees, and admirers of the Mission.
+  </p>
+  <p>
+    Your generous contribution will help us continue these services and also
+    support future development initiatives like:
+  </p>
+  <ul>
+    <li>Expanding school infrastructure for underprivileged children</li>
+    <li>Upgrading training facilities for women’s self-employment</li>
+    <li>Organizing more medical and health awareness camps</li>
+    <li>Developing community welfare and spiritual programs</li>
+  </ul>
+  <p className="donation-thanks">
+    🙏 Thank you for being a part of this noble mission. Every donation makes a
+    difference.
+    All donations to the Ashrama are exempted from Income Tax as 80G has been granted to this Ashrama.
+  </p>
+</div>
+
         <form onSubmit={handleSubmit} className="form">
           <div className="form-group">
             <label htmlFor="from_name">Name</label>

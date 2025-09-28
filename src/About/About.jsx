@@ -60,9 +60,16 @@ const About = () => {
             <img src="https://res.cloudinary.com/dqlex5zga/image/upload/v1755836240/2016_uupoe4.webp" alt="Ramakrishna Mission" />
           </div>
           <div className="about-text">
-            <h1>History of Ramakrishna Mission, Rajgram</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-            {!showMore && <p>Additional history content...</p>}
+            <h1>History of Ramakrishna Ashram, Rajgram</h1>
+            <p><strong>Ramkrishna Ashram Vidyamandir</strong> was founded on 12th January, 2006 to spread the life and message of Sri Ramakrishna, Holy Sri Sri Maa and Swami Vivekananda, the prophet of this modern age.......</p>
+            {!showMore && <p>True and truthful Swamiji said: “Education is the panacea of all diseases.”
+Education, in other words, means value-oriented education that makes and shapes disciplined students. <br/>To the children of the poor and backward community from this arid and underdeveloped area, the school started functioning on 6th April, 2006 with only 18 students in a thatched house in an open field.<br/>Since then, the school has been running smoothly and has also produced good results in the Secondary Examination.
+<br/>At present the total number of students studying in Primary & Secondary Units is 750. The Ashram also manages another school named Ramkrishna Ashram Vivekananda Vidyapith. In this institution, 250 students from all communities pursue their studies with free spirit and enthusiasm.
+<br/>
+For the religious and cultural development of the people, various religious and cultural functions are conducted. For all the students residing in our hostel, it is obligatory that they must attend the prayer held daily in the morning and evening.
+<br/>
+The values of honesty, character, chastity, purity and piety, unselfishness, love and sacrifice for others, above all the sense of surrender to the all-pervasive and omniscient reality, are being taught to our students through the messages of the noble and illuminating lives of the religious leaders of various faiths and sects.
+</p>}
             <button onClick={toggleText}>{!showMore ? "Read Less" : "Read More"}</button>
           </div>
         </div>
