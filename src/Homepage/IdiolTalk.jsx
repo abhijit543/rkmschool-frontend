@@ -6,7 +6,7 @@ const IdiolTalk = () => {
         <img src="https://res.cloudinary.com/dqlex5zga/image/upload/v1755839650/card-1_of7utx.jpg" alt="Sri Ramakrishna" className="zigzag-image" />
 
         <div className="zigzag-content">
-          <h2>As long as I live, so long do I learn.</h2>
+          <h2>We Learn as long as we live. (যাবত্ বাঁচি, তাবত্ শিখি।)</h2>
           <p>
             Education is not just the learning of facts, but the cultivation of character, discipline, and a deep connection with truth. Inspired by the ideals of Sri Ramakrishna, we believe that
             every student carries within them a spark of divine potential.
@@ -16,7 +16,7 @@ const IdiolTalk = () => {
             strength of character, compassion for others, and faith in themselves.
           </p>
           <p>
-            Just as Sri Ramakrishna taught through simplicity, purity, and love, we aim to guide young minds to become not only successful individuals, but responsible citizens and spiritually
+            Just as Sri Ramakrishna taught us to lead a simple and pure life for the achievement of the best and the great, we aim to guide young minds to become not only successful individuals, but responsible citizens and spiritually
             awakened human beings.
           </p>
           <p>Let each student shine like a lamp — lighting the path for themselves and for the world.</p>
@@ -36,7 +36,7 @@ const IdiolTalk = () => {
       <div className="zigzag-item">
         <img src="https://res.cloudinary.com/dqlex5zga/image/upload/v1755839652/card-3_oilmml.jpg" alt="Swami Vivekananda" className="zigzag-image" />
         <div className="zigzag-content">
-          <h2>Arise! Awake! And stop not until the goal is reached.</h2>
+          <h2>Arise! Awake! And stop not till the goal is reached.</h2>
           <p>
             Swami Vivekananda, the torchbearer of Indian youth, ignited a fire of strength, self-confidence, and purpose in the hearts of millions. His message was clear — true education builds
             character, inspires courage, and reveals the divinity within each soul.
